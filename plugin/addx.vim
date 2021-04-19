@@ -39,11 +39,7 @@ def add0x(linestr,flagstr):
     #linestr = vim.current.line
     mobj = re.search('(([0-9a-fA-F]{2})\s*)+',linestr)
     if mobj:
-        print(mobj.regs[0])
-        print(mobj.regs[1])
-        print(mobj.regs[2])
         newstr = linestr[mobj.regs[0][0]:mobj.regs[0][1]]
-        print(newstr)
         if len(newstr)>3:
             str1 = linestr[0:mobj.regs[0][0]];
             str2 = linestr[mobj.regs[0][1]:];
